@@ -56,7 +56,7 @@ console.log(activeTab)
       dispatch(onUpdateSearchProducts(updateSearchProduct));
   }
 
-    return <div className=" flex items-center justify-between flex-col gap-4">
+    return <div className=" flex items-center justify-between flex-col gap-4 mdx:flex-row">
             <div className=" flex flex-wrap justify-center items-center gap-[10px]">
                 {buttons.map(({text, id}) => {
                     return <Button handler={onFilter} secondHandler={onActiveButton} key={id} className={` text-black text-[16px] font-medium border-[1px] border-black rounded-[8px] px-[4px] py[4px] ${activeTab === text ? 'bg-[#F9A43F]' : ''}`}>{text}</Button>

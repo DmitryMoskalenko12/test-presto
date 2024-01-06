@@ -33,7 +33,7 @@ const ProductCard: React.FC<ProductItem> = ({title, id, description, image, pric
 
     const disabledButton = basketData.find(item => item.id === id) ? true : undefined;
 
-    return <article className=" w-[100%] h-[100%] bg-[#FFF] rounded-[9px] shadow-2xl px-[5px] py-[10px]">
+    return <article className=" flex justify-between flex-col w-[100%] h-[100%] bg-[#FFF] rounded-[9px] shadow-2xl px-[5px] py-[10px]">
          <Link className=" block" to={`/product/${id}`}>
             <div className=" w-[250px] h-[250px] m-[0_auto]">
                 <img className="w-[100%] h-[100%] object-contain" src={image} alt={title} />
