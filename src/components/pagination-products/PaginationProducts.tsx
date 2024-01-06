@@ -20,9 +20,9 @@ const PaginatedItems: React.FC<PaginatedItemsProps> = ({ itemsPerPage, products 
       <>
       <ul className=" relative grid grid-cols-1 grid-rows-[minmax(200px,1fr)] mt-[40px] gap-[20px] sm:grid-cols-2 mdx:grid-cols-3 mdx:mt-[15px]">
         {
-            currentItems.length === 0 ? <div className=" absolute text-center  top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-[#080b08] text-[20px]">Товарів немає</div> : currentItems.map(({title, id, image, price, category, description, count}) => {
+            currentItems.length === 0 ? <div className=" absolute text-center  top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-[#080b08] text-[20px]">Товарів немає</div> : currentItems.map(({title, id, image, price, category, description, count, rating}) => {
                 return <li key={id} className=" w-[100%] h-[100%]">     
-                          <ProductCard count={count} title={title} id={id} image={image} price={price} category={category} description={description}/>
+                          <ProductCard rating={rating} count={count} title={title} id={id} image={image} price={price} category={category} description={description}/>
                        </li>       
             })
         }

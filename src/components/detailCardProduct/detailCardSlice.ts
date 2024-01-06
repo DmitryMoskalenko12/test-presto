@@ -10,8 +10,10 @@ const initialState: Product = {
     category: '',
     description: '',
     image: '',
+    rating: { rate: 0, count: 0 },
     count: 0},
-   status: 'idle',
+    id: '0',
+    status: 'idle',
 }
 
 export const fetchProduct = createAsyncThunk(
@@ -26,7 +28,9 @@ const productSlice = createSlice({
     name: 'product',
     initialState,
     reducers: {
-      
+      getId: (state, action) => {
+       state.id = action.payload
+      }
     },
     extraReducers: builder => {
       builder
@@ -46,5 +50,5 @@ const productSlice = createSlice({
   
   const {actions, reducer} = productSlice;
   
-  export const {} = actions;
+  export const {getId} = actions;
   export default reducer;

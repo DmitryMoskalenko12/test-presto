@@ -7,6 +7,7 @@ export interface ProductItem {
     category: string,
     description: string,
     image: string,
+    rating: { rate: number, count: number },
     count: number
 }
 
@@ -49,7 +50,8 @@ export interface BasketProducts {
 
 export interface Product {
     product: ProductItem,
-    status: string
+    status: string,
+    id: string
 }
 
 export interface PaginatedItemsProps {

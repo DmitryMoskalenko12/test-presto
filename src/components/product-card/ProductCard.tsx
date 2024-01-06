@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../store/store";
 import { getBasketProduct } from "../../modules/basket/basketSlice";
+import { getId } from "../detailCardProduct/detailCardSlice";
 import Modal from "../../ui/modal/Modal";
 import Button from "../../ui/buttons/Button";
 
