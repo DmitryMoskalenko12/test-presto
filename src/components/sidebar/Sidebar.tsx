@@ -3,8 +3,11 @@ import { useAppDispatch } from "../../store/store";
 import { onUpdateSearchProducts } from "../../modules/products/productsSlice";
 import { MouseEvent } from "react";
 import { fetchProducts } from "../../modules/products/productsSlice";
+import Button from "../../ui/buttons/Button";
+import { useState } from "react";
 
 const Sidebar: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<string | null>('All');
   const products = useAppSelector(state => state.products.products);
   const dispatch = useAppDispatch();
   const buttons = [
@@ -14,6 +17,10 @@ const Sidebar: React.FC = () => {
     {text: 'Electronics', id: 4},
     {text: 'Women\'s clothing', id: 5},
   ];
+console.log(activeTab)
+  const onActiveButton = (e:MouseEvent<HTMLButtonElement>) => {
+     setActiveTab(e.currentTarget.textContent);
+  }
 
   const onFilter = (e: MouseEvent<HTMLButtonElement>) => {
    switch (e.currentTarget.textContent) {
@@ -33,7 +40,6 @@ const Sidebar: React.FC = () => {
         dispatch(fetchProducts(''))
     break;
     default:
-
         break;
    }
   }
@@ -46,15 +52,18 @@ const Sidebar: React.FC = () => {
        const updateSearchProduct = products.filter(elem => {
         return  elem.title.toLowerCase().includes(e.target.value);
       });
+
       dispatch(onUpdateSearchProducts(updateSearchProduct));
   }
 
-    return <div className=" flex items-center justify-between gap-4">
-            {buttons.map(({text, id}) => {
-                return <button onClick={onFilter} key={id} className="">{text}</button>
-            })}
+    return <div className=" flex items-center justify-between flex-col gap-4">
+            <div className=" flex flex-wrap justify-center items-center gap-[10px]">
+                {buttons.map(({text, id}) => {
+                    return <Button handler={onFilter} secondHandler={onActiveButton} key={id} className={` text-black text-[16px] font-medium border-[1px] border-black rounded-[8px] px-[4px] py[4px] ${activeTab === text ? 'bg-[#F9A43F]' : ''}`}>{text}</Button>
+                })}
+            </div>
 
-            <input onChange={(e) => onSearch(e)} type="text" placeholder="find product by name"/>
+            <input className=" w-[280px] h-[40px] px-[10px] py-[10px] border-[1px] border-black rounded placeholder:text-[#929292]" onChange={(e) => onSearch(e)} type="text" placeholder="Знайти товар за назвою"/>
            </div>
 }
 

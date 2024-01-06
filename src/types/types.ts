@@ -1,3 +1,5 @@
+import { ReactNode } from "react"
+
 export interface ProductItem {
     id: string,
     title: string,
@@ -14,12 +16,13 @@ export interface ClientInfo {
     phone: string
 }
 
-/* export interface FinalOrderingInfo {
-    name: string,
-    email: string,
-    phone: string,
-    orderingProducts: ProductItem[]
-} */
+export interface ButtonParams {
+    className: string,
+    key: number,
+    children: ReactNode,
+    handler: (e: React.MouseEvent<HTMLButtonElement>) => void,
+    secondHandler?: (e: React.MouseEvent<HTMLButtonElement>) => void
+  }
 
 export interface BasketItem {
     title: string,

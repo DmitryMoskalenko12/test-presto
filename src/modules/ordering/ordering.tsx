@@ -1,4 +1,4 @@
-import OrderingForm from "../../components/ordering-form/ordering-form";
+import OrderingForm from "../../components/ordering-form/OrderingForm";
 import OrderingProducts from "../../components/ordering-products/OrderingProducts";
 
 const Ordering = () => {
