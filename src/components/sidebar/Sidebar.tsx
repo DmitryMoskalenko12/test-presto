@@ -17,7 +17,7 @@ const Sidebar: React.FC = () => {
     {text: 'Electronics', id: 4},
     {text: 'Women\'s clothing', id: 5},
   ];
-console.log(activeTab)
+  
   const onActiveButton = (e:MouseEvent<HTMLButtonElement>) => {
      setActiveTab(e.currentTarget.textContent);
   }

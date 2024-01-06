@@ -5,7 +5,7 @@ const BasketCard: React.FC<BasketItem> = ({image, title, price, count, minus, pl
               <div className=" w-[50px] h-[100px] md:w-[80px]">
                 <img className='w-[100%] h-[100%] object-contain' src={image} width={71} height={71} alt={title}/>
               </div>
-              <h1 className=' w-[128px] text-left text-[13px] overflow-hidden font-medium text-black mt-[10px] m-[0_auto] sm:w-[205px] sm:text-[16px]'>{title}</h1>
+              <h1 className=' w-[90px] text-left text-[13px] overflow-hidden font-medium text-black mt-[10px] m-[0_auto] sm:w-[205px] sm:text-[16px]'>{title}</h1>
               <div className=' text-[#2A2A2A] text-[14px] mt-[10px] m-[0_auto] sm:text-[16px]'>{price} &#36;</div>
               <div className='flex justify-center items-center gap-[5px] mt-[10px] m-[0_auto] md:gap-[15px]'>
               <button onClick={() => minus(id)} className=' font-bold text-[20px] bg-transparent sm:text-[25px]'>-</button>

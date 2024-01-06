@@ -52,7 +52,7 @@ const OrderingForm = () => {
                 <Field id='phone' type='number' name='phone' className={` h-[48px] rounded-[7px] bg-[rgba(241,242,245,0.6)] p-[10px_0_10px_20px] sm:w-[540px] md:w-[350px] mdx:w-[539px] ${errors.phone && touched.phone ? 'border-[2px] border-solid border-[red] ' : '' }`} placeholder="Phone"/>
             </div>
             <ErrorMessage name='phone' className=' text-[red] md:ml-[53px]' component={'div'}/>
-            <button className=" w-[301px] h-[60px] bg-[#f7d22d] font-medium cursor-pointer rounded-[8px] text-[15px] text-[#FFF] m-[0_auto] disabled:bg-[#808080] mdx:ml-[50px] " disabled={disabledButton} type="submit">Купити товар</button>
+            <button className=" w-[301px] h-[60px] bg-[#F9A43F] font-medium cursor-pointer rounded-[8px] text-[15px] text-[#FFF] m-[0_auto] disabled:bg-[#808080] mdx:ml-[50px] " disabled={disabledButton} type="submit">Купити товар</button>
             {
                notification ?  ReactDOM.createPortal(<Modal removeNotification={removeNotification}>{notification}</Modal>, document.querySelector('.modal') as HTMLDivElement) : null
             }
