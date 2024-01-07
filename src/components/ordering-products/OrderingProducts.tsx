@@ -5,9 +5,9 @@ const OrderingProducts = () => {
 
   return (
     <div className="w-[100%] p-[10px] bg-[#FFF] shadow-xl m-[0_auto] sm:w-[540px] md:w-[300px] lg:w-[400px]">
-      <h2 className=" text-[#f7d22d] text-[15px] font-bold lg:text-[16px]">
+      <h1 className=" text-[#f7d22d] text-[15px] font-bold lg:text-[16px]">
         Склад замовлення
-      </h2>
+      </h1>
       {orderingProducts.length === 0 ? (
         <div className="text-center text-[16px] font-semibold">Немає товарів</div>
       ) : (

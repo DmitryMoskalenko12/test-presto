@@ -8,6 +8,7 @@ import ReactDOM from "react-dom";
 import { getBasketProduct } from "../../modules/basket/basketSlice";
 import Modal from "../../ui/modal/Modal";
 import { Helmet } from "react-helmet";
+import DetailButtonProduct from "../../ui/buttons/DetailButtonProd";
 
 const DetailCardProduct = () => {
   const product = useAppSelector((state) => state.product.product);
@@ -71,16 +72,7 @@ const DetailCardProduct = () => {
             <span className="text-black text-[16px] font-normal">Price: </span>
             {product.price} $
           </div>
-
-          <button
-            disabled={
-              basketData.find((item) => item.id === product.id) ? true : false
-            }
-            onClick={() => getProduct(product)}
-            className="buy-product-page"
-          >
-            Придбати
-          </button>
+          <DetailButtonProduct handler={getProduct} className={"buy-product-page"} value={product} disabled={basketData.find((item) => item.id === product.id) ? true : false}>Придбати</DetailButtonProduct>
           {notification
             ? ReactDOM.createPortal(
                 <Modal removeNotification={removeNotification}>

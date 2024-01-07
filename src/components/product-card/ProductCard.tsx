@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../store/store";
 import { getBasketProduct } from "../../modules/basket/basketSlice";
 import Modal from "../../ui/modal/Modal";
+import BasketProductCardButton from "../../ui/buttons/BasketProductButton";
 
 const ProductCard: React.FC<ProductItem> = ({
   title,
@@ -61,13 +62,7 @@ const ProductCard: React.FC<ProductItem> = ({
           {price} $
         </div>
       </Link>
-      <button
-        disabled={basketData.find((item) => item.id === id) ? true : false}
-        onClick={() => getProduct(id)}
-        className="buy-product"
-      >
-        Придбати
-      </button>
+      <BasketProductCardButton id={id} className={"buy-product"} handler={getProduct} disabled={basketData.find((item) => item.id === id) ? true : false}>Придбати</BasketProductCardButton>
       {notification
         ? ReactDOM.createPortal(
             <Modal removeNotification={removeNotification}>

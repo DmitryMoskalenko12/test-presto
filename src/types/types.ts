@@ -11,6 +11,22 @@ export interface ProductItem {
     count: number
 }
 
+export interface DetailProductButton {
+    children: ReactNode,
+    className: string,
+    handler: (value: ProductItem) => void,
+    value: ProductItem,
+    disabled: boolean
+}
+
+export interface BasketProductButtonsParams {
+    children: ReactNode,
+    id: string,
+    className: string,
+    handler: (id: string) => void,
+    disabled: boolean
+}
+
 export interface ClientInfo {
     name: string,
     email: string,
@@ -18,9 +34,9 @@ export interface ClientInfo {
 }
 
 export interface IncDec {
- handler: (id: string) => void,
- children: ReactNode,
- id: string
+    handler: (id: string) => void,
+    children: ReactNode,
+    id: string
 }
 
 export interface FormInputBlockParams {

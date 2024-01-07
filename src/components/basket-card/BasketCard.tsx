@@ -1,5 +1,6 @@
 import { BasketItem } from "../../types/types";
 import IncDecButton from "../../ui/inc-dec-button/IncDecButton";
+import BasketProductCardButton from "../../ui/buttons/BasketProductButton";
 
 const BasketCard: React.FC<BasketItem> =
   ({ image, title, price, count, minus, plus, deleteProduct, id }) => {
@@ -27,9 +28,8 @@ const BasketCard: React.FC<BasketItem> =
           </span>
           <IncDecButton id={id} handler={plus}>+</IncDecButton>
         </div>
-
-        <button onClick={() => deleteProduct(id)} className=" block m-[0_auto]">
-          <svg
+        <BasketProductCardButton disabled={false} handler={deleteProduct} id={id} className=" block m-[0_auto]"> 
+           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="30"
             height="30"
@@ -41,7 +41,7 @@ const BasketCard: React.FC<BasketItem> =
               fill="#2A2A2A"
             />
           </svg>
-        </button>
+        </BasketProductCardButton>
       </article>
     );
   }
