@@ -8,7 +8,7 @@ const Header = () => {
             <div className="container">
              <div className="flex justify-between items-center">
                  <Link to={'/'}>
-                     <span className=" text-[20px] text-[#FFF] md:text-[26px]">Studiopresto</span>
+                     <span className=" text-[20px] text-[#FFF] font-bold md:text-[26px]">Studiopresto</span>
                  </Link>
 
                  <div className=" flex justify-between items-center gap-5">

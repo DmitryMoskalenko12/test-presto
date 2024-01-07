@@ -48,8 +48,8 @@ const DetailCardProduct = () => {
 
       <div className="">
         <h1 className="text-center text-black mt-[10px] text-[16px] font-medium">{product.title}</h1>
-        <h2 className="text-[#929292] text-center mt-[5px] font-normal"><span className="text-black font-normal text-[16px] ">Category: </span>{product.category}</h2>
-        <h3 className="text-[#2A2A2A] text-[26px] text-center mt-[5px]"><span className="text-black text-[16px] font-normal">Rating:</span> {product.rating.rate}</h3>
+        <h2 className="text-[#929292] text-center mt-[5px] font-medium"><span className="text-black font-normal text-[16px] ">Category: </span>{product.category}</h2>
+        <h3 className="text-[#2A2A2A] text-[26px] font-medium text-center mt-[5px]"><span className="text-black text-[16px] font-normal">Rating:</span> {product.rating.rate}</h3>
         <p className=" w-[100%] text-[15px] mt-[10px] overflow-hidden font-normal text-justify m-[0_auto] mdx:w-[450px]">
           {product.description}
         </p>

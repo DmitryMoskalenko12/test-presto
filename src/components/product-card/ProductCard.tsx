@@ -36,7 +36,7 @@ const ProductCard: React.FC<ProductItem> = ({title, id, description, image, pric
                 <img className="w-[100%] h-[100%] object-contain" src={image} alt={title} />
             </div>
             <h2 className="text-center text-black mt-[10px] text-[16px] font-medium">{title}</h2>
-            <div className="text-[#929292] text-center mt-[5px]"><span className="text-black">Category: </span>{category}</div>
+            <div className="text-[#929292] text-[14px] font-medium text-center mt-[5px]"><span className="text-black font-medium text-[16px]">Category: </span>{category}</div>
             <p className="text-[15px] mt-[10px] font-normal">{description}</p>
             <div className="text-[21px] text-[#2A2A2A] font-bold text-center mt-[10px]">{price} $</div>
          </Link>

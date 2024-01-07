@@ -63,7 +63,7 @@ const Sidebar: React.FC = () => {
                 })}
             </div>
 
-            <input className=" w-[280px] h-[40px] px-[10px] py-[10px] border-[1px] border-black rounded placeholder:text-[#929292]" onChange={(e) => onSearch(e)} type="text" placeholder="Знайти товар за назвою"/>
+            <input className=" w-[280px] h-[40px] px-[10px] py-[10px] border-[1px] border-black rounded placeholder:text-[#929292] placeholder:font-medium placeholder:text-[14px]" onChange={(e) => onSearch(e)} type="text" placeholder="Знайти товар за назвою"/>
            </div>
 }
 
