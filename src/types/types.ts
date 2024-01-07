@@ -23,6 +23,7 @@ export interface ButtonParams {
     children: ReactNode,
     handler: (e: React.MouseEvent<HTMLButtonElement>) => void,
     secondHandler?: (e: React.MouseEvent<HTMLButtonElement>) => void
+    disabled?: boolean
   }
 
 export interface BasketItem {

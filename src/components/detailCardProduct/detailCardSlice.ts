@@ -28,9 +28,7 @@ const productSlice = createSlice({
     name: 'product',
     initialState,
     reducers: {
-      getId: (state, action) => {
-       state.id = action.payload
-      }
+
     },
     extraReducers: builder => {
       builder
@@ -50,5 +48,5 @@ const productSlice = createSlice({
   
   const {actions, reducer} = productSlice;
   
-  export const {getId} = actions;
+  export const {} = actions;
   export default reducer;

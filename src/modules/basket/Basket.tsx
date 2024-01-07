@@ -3,6 +3,7 @@ import { useAppSelector } from "../../store/store";
 import { updateCountProduct, deleteProduct } from "./basketSlice";
 import BasketCard from "../../components/basket-card/BasketCard";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Basket = () => {
     const dispatch = useAppDispatch();
@@ -44,7 +45,12 @@ const Basket = () => {
         );
       };
 
-    return <section className="pt-[40px] px-[5px]">
+    return <section className="pt-[40px] px-[5px] bg-[#FFFBF8] h-[100vh]">
+          <Helmet>
+            <meta name="description" content="Basket Page"
+            />
+            <title>Basket page</title>
+         </Helmet>
         <div className="container">
             <ul className="flex flex-col gap-[15px] m-[0_auto]">
                 {
@@ -56,7 +62,7 @@ const Basket = () => {
                 }
             </ul>
 
-            <Link className={' flex justify-center items-center w-[200px] h-[50px] cursor-pointer bg-[#F9A43F] m-[0_auto] font-medium rounded-[9px] text-white mt-[20px] mb-[31px]'} to={'/ordering'}>Оформити замовленя</Link>
+            <Link className={'placing-order'} to={'/ordering'}>Оформити замовленя</Link>
         </div>
     </section>
 }

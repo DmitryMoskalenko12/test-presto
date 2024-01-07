@@ -1,6 +1,8 @@
 import { BasketItem } from "../../types/types";
+import { memo } from "react";
 
-const BasketCard: React.FC<BasketItem> = ({image, title, price, count, minus, plus, deleteProduct, id}) => {
+const BasketCard: React.FC<BasketItem> = memo(({image, title, price, count, minus, plus, deleteProduct, id}) => {
+
     return <article className=' flex justify-center items-center gap-[5px]  m-[0_auto] sm:w-[540px] md:w-[630px]'>
               <div className=" w-[50px] h-[100px] md:w-[80px]">
                 <img className='w-[100%] h-[100%] object-contain' src={image} width={71} height={71} alt={title}/>
@@ -19,6 +21,6 @@ const BasketCard: React.FC<BasketItem> = ({image, title, price, count, minus, pl
                 </svg>
               </button>
            </article>
-}
+})
 
 export default BasketCard;

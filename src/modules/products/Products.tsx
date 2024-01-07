@@ -6,6 +6,7 @@ import PaginatedItems from "../../components/pagination-products/PaginationProdu
 import Sidebar from "../../components/sidebar/Sidebar";
 import Loading from "../../ui/loading/Loading";
 import Error from "../../ui/error/Error";
+import { Helmet } from "react-helmet";
 
 const Products = () => {
     const filteredProducts = useAppSelector(state => state.products.filteredProducts);
@@ -21,7 +22,12 @@ const Products = () => {
     // eslint-disable-next-line
     },[])
 
-    return <section className=" py-[20px] px-[10px] bg-[#FFFBF8]">
+    return <section className=" py-[20px] px-[10px] bg-[#FFFBF8] h-[100vh]">
+            <Helmet>
+              <meta name="description" content="Products page"
+              />
+              <title>Products page</title>
+            </Helmet>
             <div className="container"> 
                  <Sidebar/>
                  <div className=" relative min-h-[200px]">

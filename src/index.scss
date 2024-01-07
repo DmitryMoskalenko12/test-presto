@@ -2,8 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap');
+
 @layer base {
   body {
-      @apply font-openSans;
+    @apply font-openSans;
+  }
+
+  .placing-order {
+    @apply flex justify-center items-center w-[200px] h-[50px] cursor-pointer bg-[#F9A43F] m-[0_auto] font-medium rounded-[9px] text-white mt-[20px] mb-[31px] transition-all duration-[0.6s] mdx:hover:bg-[#F2C519] mdx:active:bg-[#FFDF00] mdx:hover:text-black mdx:hover:transition-all mdx:hover:duration-[0.6s]
+  }
+
+  .buy-product {
+    @apply block w-[163px] h-[34px] cursor-pointer transition-all duration-[0.6s] bg-[#F9A43F] disabled:bg-[#808080] disabled:text-[#FFF] m-[0_auto] rounded-[9px] text-white mt-[20px] mb-[31px] mdx:hover:bg-[#F2C519] mdx:active:bg-[#FFDF00] mdx:hover:text-black mdx:hover:transition-all mdx:hover:duration-[0.6s] mdx:disabled:hover:bg-[#808080] mdx:disabled:hover:text-[#FFF]
+  }
+
+  .ordering {
+    @apply w-[301px] h-[60px] bg-[#F9A43F] font-medium cursor-pointer rounded-[8px] text-[15px] text-[#FFF] m-[0_auto] transition-all duration-[0.6s] disabled:bg-[#808080] mdx:ml-[50px] mdx:hover:bg-[#F2C519] mdx:active:bg-[#FFDF00] mdx:hover:text-black mdx:hover:transition-all mdx:hover:duration-[0.6s] mdx:disabled:hover:bg-[#808080] mdx:disabled:hover:text-[#FFF]
+  }
+
+  .buy-product-page {
+    @apply block w-[163px] h-[34px] cursor-pointer transition-all duration-[0.6s] bg-[#F9A43F] disabled:bg-[#808080] disabled:text-[#FFF] m-[0_auto] rounded-[9px] text-white mt-[20px] mb-[31px] mdx:hover:bg-[#F2C519] mdx:active:bg-[#FFDF00] mdx:hover:text-black mdx:hover:transition-all mdx:hover:duration-[0.6s] mdx:disabled:hover:bg-[#808080] mdx:disabled:hover:text-[#FFF]
   }
 }

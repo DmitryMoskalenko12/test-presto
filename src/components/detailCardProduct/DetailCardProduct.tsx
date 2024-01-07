@@ -7,6 +7,7 @@ import { ProductItem } from "../../types/types";
 import  ReactDOM  from "react-dom";
 import { getBasketProduct } from "../../modules/basket/basketSlice";
 import Modal from "../../ui/modal/Modal";
+import { Helmet } from 'react-helmet'
 
 const DetailCardProduct = () => {
     const product = useAppSelector(state => state.product.product);
@@ -34,7 +35,13 @@ const DetailCardProduct = () => {
     //  eslint-disable-next-line
     },[])
 
-    return <article className=" grid grid-cols-1 grid-rows-1 px-[10px] pt-[40px] justify-center sm:grid-cols-2 sm:col-gap-[20px]">
+    return <>
+    <Helmet>
+        <meta name="description" content="Product page"
+        />
+        <title>{product.title}</title>
+    </Helmet>
+    <article className=" grid grid-cols-1 grid-rows-1 px-[10px] pt-[40px] justify-center sm:grid-cols-2 sm:col-gap-[20px]">
       <div className="w-[100%] h-[300px] m-[0_auto]">
         <img className=" w-[100%] h-[100%] object-contain" src={product.image} alt={product.title} />
       </div>
@@ -48,12 +55,13 @@ const DetailCardProduct = () => {
         </p>
         <div className="text-[21px] text-[#2A2A2A] font-bold text-center mt-[10px]"><span className="text-black text-[16px] font-normal">Price: </span>{product.price} $</div>
 
-        <button disabled={basketData.find(item => item.id === product.id) ? true : false} onClick={() => getProduct(product)} className=" block w-[163px] h-[34px] cursor-pointer bg-[#F9A43F] disabled:bg-[#808080] m-[0_auto] rounded-[9px] text-white mt-[20px] mb-[31px]">Придбати</button>
+        <button disabled={basketData.find(item => item.id === product.id) ? true : false} onClick={() => getProduct(product)} className="buy-product-page">Придбати</button>
         {
            notification ?  ReactDOM.createPortal(<Modal removeNotification={removeNotification}>{notification}</Modal>, document.querySelector('.modal') as HTMLDivElement) : null
         }
       </div>
     </article>
+    </>
 }
 
 export default DetailCardProduct;

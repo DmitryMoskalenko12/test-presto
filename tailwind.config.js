@@ -22,11 +22,7 @@ module.exports = {
           xl: '1320px'
         },
       },
-      colors: {
-        blackMain: '#424242',
-        hakki: '#D8B152',
-        bg: '#202020'
-      },
+      colors: {},
       
       fontFamily: {
         openSans: ['Open Sans', 'sans-serif']
