@@ -8,3 +8,4 @@
 6.React-Helmet
 7.Yup
 8.React-Paginate
+9.Tailwindcss
