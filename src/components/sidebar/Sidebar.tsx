@@ -50,7 +50,7 @@ const Sidebar: React.FC = () => {
        dispatch(onUpdateSearchProducts(products))
     }
        const updateSearchProduct = products.filter(elem => {
-        return  elem.title.toLowerCase().includes(e.target.value);
+        return elem.title.toLowerCase().includes(e.target.value.toLowerCase());
       });
 
       dispatch(onUpdateSearchProducts(updateSearchProduct));
