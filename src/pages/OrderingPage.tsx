@@ -1,4 +1,4 @@
-import Ordering from "../modules/ordering/Ordering";
+import Ordering from "../modules/ordering/ordering";
 
 const OrderingPage = () => {
   return (
