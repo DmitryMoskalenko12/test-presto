@@ -17,6 +17,22 @@ export interface ClientInfo {
     phone: string
 }
 
+export interface IncDec {
+ handler: (id: string) => void,
+ children: ReactNode,
+ id: string
+}
+
+export interface FormInputBlockParams {
+    htmlFor: string,
+    children: ReactNode,
+    id: string,
+    name: string,
+    error: string | undefined,
+    touched: boolean | undefined,
+    type: string,
+    placeholder: string
+}
 export interface ButtonParams {
     className: string,
     key: number,

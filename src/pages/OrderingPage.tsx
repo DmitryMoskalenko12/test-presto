@@ -1,9 +1,11 @@
-import Ordering from "../modules/ordering/ordering";
+import Ordering from "../modules/ordering/Ordering";
 
 const OrderingPage = () => {
-    return <>
-             <Ordering/>
-           </>
-}
+  return (
+    <>
+      <Ordering />
+    </>
+  );
+};
 
 export default OrderingPage;

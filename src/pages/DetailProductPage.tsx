@@ -1,9 +1,11 @@
 import DetailCardProduct from "../components/detailCardProduct/DetailCardProduct";
 
 const DetailProductPage = () => {
-    return <>
-             <DetailCardProduct/>
-           </>
-}
+  return (
+    <>
+      <DetailCardProduct />
+    </>
+  );
+};
 
 export default DetailProductPage;

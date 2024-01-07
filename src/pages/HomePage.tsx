@@ -1,9 +1,11 @@
 import Products from "../modules/products/Products";
 
 const HomePage = () => {
-    return <>
-             <Products/>
-           </>
-}
+  return (
+    <>
+      <Products />
+    </>
+  );
+};
 
 export default HomePage;
