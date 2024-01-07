@@ -1,4 +1,4 @@
-import DetailCardProduct from "../components/detailCardProduct/DetailCardProduct";
+import DetailCardProduct from "../components/detail-card-product/DetailCardProduct";
 
 const DetailProductPage = () => {
   return (

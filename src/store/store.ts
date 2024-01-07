@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { useDispatch, useSelector, TypedUseSelectorHook } from 'react-redux';
 import products from '../modules/products/productsSlice';
-import product from '../components/detailCardProduct/detailCardSlice';
+import product from '../components/detail-card-product/detailCardSlice';
 import basket from '../modules/basket/basketSlice';
 
 export const store = configureStore({
