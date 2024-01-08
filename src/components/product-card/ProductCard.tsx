@@ -50,9 +50,9 @@ const ProductCard: React.FC<ProductItem> = ({
             alt={title}
           />
         </div>
-        <h2 className="text-center text-black mt-[10px] text-[16px] font-medium">
+        <h1 className="text-center text-black mt-[10px] text-[16px] font-medium">
           {title}
-        </h2>
+        </h1>
         <div className="text-[#929292] text-[14px] font-medium text-center mt-[5px]">
           <span className="text-black font-medium text-[16px]">Category: </span>
           {category}

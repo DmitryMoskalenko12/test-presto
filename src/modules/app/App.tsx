@@ -6,11 +6,13 @@ import HomePage from "../../pages/HomePage";
 import RootLayout from "../root-layout/RootLayout";
 import BasketPage from "../../pages/BasketPage";
 import OrderingPage from "../../pages/OrderingPage";
+import NotFound from "../../pages/NotFoundPage";
 
 const App: React.FC = () => {
   const routes = createBrowserRouter([
     {
       path: "/",
+      errorElement: <NotFound/>,
       element: <RootLayout />,
       children: [
         { index: true, element: <HomePage /> },
